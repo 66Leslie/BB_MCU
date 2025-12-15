@@ -1,23 +1,27 @@
 # BB_MCU
 
-Blue Bridge Cup (8051) practice and contest projects, collected by year and phase. Projects are Keil uVision builds; sources are kept, build outputs are ignored.
+这是我备战蓝桥杯「单片机赛道（8051/C51）」过程中整理的工程仓库：包含历年真题/练习/模拟赛工程、常用驱动代码，以及一些个人笔记。最终在比赛中获奖（省级二等奖）；同时也踩了不少坑，对我来说更像一次“滑铁卢式复盘”。
 
-## 备注
-- 蓝桥杯省二（自认为滑铁卢）
+## 仓库内容
+- 历年工程：按年份与阶段（省赛/国赛）整理的 Keil uVision 工程与源码。
+- 练习工程：积分赛/专项练习的小工程，便于快速迭代与复用。
+- 驱动与模块：DS1302、I2C、OneWire、串口、按键、数码管等常用模块代码。
+- 资料与笔记：`个人思维导图记忆.pdf` 用于快速回忆要点（偏个人使用）。
 
-## Layout
-- `13P`, `13_N`, `14P`, `14_N`, `15P`, `15_N`: Province (`P`) and national (`N`) problem sets with Keil projects (`.uvproj`) and source for each year.
-- `points_race/p4_*`, `points_race/p5_*`: Point-race practice projects.
-- `Driver`, `driver_myself`: Reusable drivers (DS1302, I2C, UART, key scan, etc.) for 8051 projects.
-- `个人模版`, `模拟赛`: Personal template and mock-contest projects (Keil/EIDE).
-- `个人思维导图记忆.pdf`: Personal mind-map / quick memory notes.
-- `.vscode`: Editor settings for quick builds/debug (mostly Keil Assistant/EIDE logs).
+## 目录结构
+- `13P`, `14P`, `15P`: 省赛（Province）工程
+- `13_N`, `14_N`, `15_N`: 国赛（National）工程
+- `points_race/`: 积分赛练习（`p4_*`, `p5_*` 等）
+- `Driver/`, `driver_myself/`: 通用驱动/自写驱动
+- `个人模版/`: 个人工程模板
+- `模拟赛/`: 模拟赛工程
+- `DP2024_SCM（单片机资源包）/`: 一些参考资料/工具（如数码管段码表、Datasheet 等）
 
-## Usage
-1. Clone the repo and open the desired `.uvproj` in Keil uVision (4/5).
-2. Pick the target project (e.g., `13P`, `14_N`), build, and flash to your board.
-3. Reuse code from `Driver` or `driver_myself` when starting new problems.
+## 如何使用
+1. 用 Keil uVision 打开对应目录下的 `.uvproj` 工程文件。
+2. 根据你的开发板/芯片型号配置目标芯片与下载方式（常见为 STC 系列 + STC-ISP）。
+3. 编译后生成的 `hex` 等产物请在本地生成；仓库默认不提交构建产物。
 
-## Notes
-- Build artifacts (`Objects/`, `Listings/`, `*.hex`, etc.) are ignored by `.gitignore`; rebuild locally after cloning.
-- `DP2024_SCM（单片机资源包）` subfolders hold reference PDFs for segment maps.
+## 说明
+- 已通过根目录 `.gitignore` 过滤 `Objects/`、`Listings/`、`*.hex`、日志等构建/临时文件，避免仓库膨胀。
+- 仓库偏个人整理，目录命名保留当时的习惯；如果你希望我再做一次结构重排（例如按“年份/题号/模块”统一），告诉我你的目标结构即可。

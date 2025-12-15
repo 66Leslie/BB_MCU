@@ -1,0 +1,44 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Build outputs
+**/Objects/
+**/Listings/
+**/build/
+**/bin/
+**/obj/
+**/out/
+*.axf
+*.hex
+*.lnp
+*.lst
+*.map
+*.m51
+*.obj
+*.o
+*.build_log.htm
+*.iex
+
+# Keil/IDE state
+*.uvgui*
+*.uvopt*
+*.uvprojx
+*.aps
+*.plg
+*.tra
+*.tid
+*.log
+*.bak
+*.tmp
+*.lock
+**/.vscode/uv4.log*
+**/.vscode/*.log
+**/.vscode/*.log.lock
+**/.eide*/
+**/.eide.*
+
+# Shortcuts and archives
+*.lnk
+*.zip
+*.rar
